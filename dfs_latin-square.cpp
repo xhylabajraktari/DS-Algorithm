@@ -25,3 +25,12 @@ void Graph::DFS(int v)
         if (!visited[*i])
             DFS(*i);
 }
+void Graph::createGraph(int n, Graph &g) {
+    for (int i = 0; i < n; i++)
+    {
+        if (i != n - 1)
+            g.addEdge(i, i + 1);
+        else
+            g.addEdge(i, 0);
+    }
+}
