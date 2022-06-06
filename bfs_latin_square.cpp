@@ -59,3 +59,20 @@ void Graph::createGraph(int n, Graph& g) {
         }
     }
 }
+
+int main() {
+
+    int n;
+    cout << "Inputi n = ";
+    cin >> n;
+    Graph g(n);
+    cout << "Latin Square me Breadth First Search" << endl;
+    g.createGraph(n, g);
+
+    for (int i = 0; i < n; i++) {
+        g.BFS(i);
+        cout << endl;
+    }
+
+    return 0;
+}
